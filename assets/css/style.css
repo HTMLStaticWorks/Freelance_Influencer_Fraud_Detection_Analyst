@@ -3,7 +3,9 @@
     --secondary-color: #0ea5e9;
     --tertiary-color: #ffffff;
     --text-main: #000000;
-    --text-muted: #000000;
+    --text-muted: #64748b;
+    --hero-overlay: rgba(255, 255, 255, 0.9);
+    --hero-text: #0f172a;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -13,6 +15,8 @@
     --tertiary-color: #020617;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
+    --hero-overlay: rgba(2, 6, 23, 0.85);
+    --hero-text: #f8fafc;
 }
 
 body {
@@ -66,6 +70,20 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #0ea5e9;
 }
 
+.btn-fixed {
+    min-width: 140px;
+}
+
+.btn-lg.btn-fixed {
+    min-width: 250px;
+}
+
+@media (max-width: 576px) {
+    .btn-fixed, .btn-lg.btn-fixed {
+        min-width: 100%;
+    }
+}
+
 /* Navbar */
 .navbar {
     padding: 15px 0;
@@ -91,21 +109,26 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     padding: 160px 0 120px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero.png');
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('../images/hero.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
+    color: var(--hero-text);
 }
 
-[data-bs-theme="dark"] .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../images/hero.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.hero-section h1 {
+    color: inherit;
 }
+
+.hero-section .lead {
+    color: inherit;
+    opacity: 0.9;
+}
+
+/* Removed duplicate hero-section dark mode as it's now variable-driven */
 
 /* Cards */
 .card {
@@ -176,6 +199,15 @@ footer a:hover {
 /* Utilities */
 .text-secondary {
     color: var(--secondary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--tertiary-color) !important;
+}
+
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary p {
+    color: var(--tertiary-color) !important;
 }
 
 .bg-secondary-light {
