@@ -10,53 +10,64 @@
 </head>
 <body class="bg-light">
 
+    <!-- Top Controls -->
+    <div class="position-fixed top-0 end-0 p-4 d-flex gap-2 z-3">
+        <button id="rtlToggle" class="btn btn-outline-secondary btn-sm" title="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+        </button>
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm" title="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+        </button>
+    </div>
+
     <div class="container">
         <div class="row min-vh-100 align-items-center justify-content-center py-5">
             <div class="col-md-5">
-                <div class="text-center mb-4">
+                <div class="card p-5 border-0 shadow-sm text-center">
                     <a href="index.html" class="navbar-brand d-flex align-items-center justify-content-center mb-4">
                         <i class="bi bi-shield-check text-secondary me-2 fs-1"></i>
-                        <span class="fw-bold fs-2 text-dark">TrustShield</span>
+                        <span class="fw-bold fs-2 text-dark theme-text">TrustShield</span>
                     </a>
-                </div>
-                <div class="card p-5 border-0 shadow-sm">
                     <h3 class="fw-bold mb-2">Welcome Back</h3>
                     <p class="text-muted small mb-4">Login to access your audit dashboard.</p>
                     
-                    <form>
+                    <form class="text-start">
                         <div class="mb-3">
                             <label class="form-label small fw-bold">Email Address</label>
                             <input type="email" class="form-control py-2" placeholder="name@company.com">
                         </div>
                         <div class="mb-3">
-                            <div class="d-flex justify-content-between">
-                                <label class="form-label small fw-bold">Password</label>
-                                <a href="#" class="small text-secondary text-decoration-none">Forgot?</a>
+                            <label class="form-label small fw-bold">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control py-2" id="loginPassword" placeholder="••••••••">
+                                <button class="btn btn-outline-secondary border-start-0" type="button" onclick="togglePassword('loginPassword', this)">
+                                    <i class="bi bi-eye"></i>
+                                </button>
                             </div>
-                            <input type="password" class="form-control py-2" placeholder="••••••••">
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-4 d-flex justify-content-between align-items-center">
                             <div class="form-check small">
                                 <input class="form-check-input" type="checkbox" id="remember">
                                 <label class="form-check-label" for="remember">Remember me</label>
                             </div>
+                            <a href="#" class="small text-secondary text-decoration-none">Forgot Password?</a>
                         </div>
                         <a href="dashboard.html" class="btn btn-primary w-100 py-2 mb-4">Login</a>
                         
                         <div class="text-center mb-4 position-relative">
                             <hr>
-                            <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 small text-muted">Or login with</span>
+                            <span class="position-absolute top-50 start-50 translate-middle bg-body px-3 small text-muted">Or sign in with</span>
                         </div>
                         
                         <div class="row g-2 mb-4">
                             <div class="col-6">
-                                <button type="button" class="btn btn-outline-light border text-dark w-100 py-2 small d-flex align-items-center justify-content-center">
+                                <button type="button" class="btn btn-outline-secondary w-100 py-2 small d-flex align-items-center justify-content-center">
                                     <i class="bi bi-google me-2"></i> Google
                                 </button>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-outline-light border text-dark w-100 py-2 small d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-linkedin me-2"></i> LinkedIn
+                                <button type="button" class="btn btn-outline-secondary w-100 py-2 small d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-apple me-2"></i> Apple
                                 </button>
                             </div>
                         </div>

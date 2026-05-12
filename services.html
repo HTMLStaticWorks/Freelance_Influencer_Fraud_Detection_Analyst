@@ -19,10 +19,10 @@
             </a>
             
             <div class="d-flex align-items-center d-lg-none">
-                <button id="rtlToggle" class="btn btn-link text-primary me-1">
+                <button id="rtlToggle" class="me-2" title="Toggle RTL">
                     <span class="small fw-bold">RTL</span>
                 </button>
-                <button id="themeToggle" class="btn btn-link text-primary me-2">
+                <button id="themeToggle" class="me-2" title="Toggle Theme">
                     <i class="bi bi-moon-fill"></i>
                 </button>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -41,14 +41,14 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <button id="rtlToggle" class="btn btn-link text-primary me-2 d-none d-lg-block">
+                    <button id="rtlToggle" class="me-2 d-none d-lg-block" title="Toggle RTL">
                         <span class="small fw-bold">RTL</span>
                     </button>
-                    <button id="themeToggleDesktop" class="btn btn-link text-primary me-3 d-none d-lg-block">
+                    <button id="themeToggleDesktop" class="me-3 d-none d-lg-block" title="Toggle Theme">
                         <i class="bi bi-moon-fill"></i>
                     </button>
-                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn btn-outline-primary btn-fixed me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-fixed">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -78,10 +78,10 @@
     </div>
 
     <main>
-        <section class="py-5 bg-primary text-center">
+        <section class="hero-section-services hero-sm text-center">
             <div class="container">
-                <h1 class="display-4 fw-bold">Our Forensic Services</h1>
-                <p class="lead opacity-75">Deep-dive audits to ensure your influencer marketing is 100% authentic.</p>
+                <h1 class="display-4 fw-bold mb-4">Our Forensic <span class="text-secondary">Capabilities</span></h1>
+                <p class="lead mb-5 fs-4">Explore our comprehensive suite of data-driven services designed to unmask fake engagement and protect your marketing spend.</p>
             </div>
         </section>
 
@@ -90,91 +90,126 @@
                 <div class="row g-4">
                     <!-- Service 1 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/audit.png" class="card-img-top" alt="Bot Audit">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Bot Follower Audit</h5>
-                                <p class="small text-muted">Detection of automated accounts and fake followers.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/bot_detection.png" class="card-img-top service-img" alt="Bot Audit">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Bot Follower Audit</h5>
+                                <p class="small text-muted mb-4">Detection of automated accounts and fake followers.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/engagement.png" class="card-img-top" alt="Engagement">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Engagement Authenticity</h5>
-                                <p class="small text-muted">Verifying likes and comments are from real humans.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/engagement_audit.png" class="card-img-top service-img" alt="Engagement">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Engagement Authenticity</h5>
+                                <p class="small text-muted mb-4">Verifying likes and comments are from real humans.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/hero.png" class="card-img-top" alt="Audience">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Audience Demographics</h5>
-                                <p class="small text-muted">Location and age verification of the follower base.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/hero.png" class="card-img-top service-img" alt="Audience">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Audience Demographics</h5>
+                                <p class="small text-muted mb-4">Location and age verification of the follower base.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 4 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/audit.png" class="card-img-top" alt="Growth">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Historical Growth</h5>
-                                <p class="small text-muted">Analyzing account history for non-natural spikes.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/data_collection.png" class="card-img-top service-img" alt="Growth">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Historical Growth</h5>
+                                <p class="small text-muted mb-4">Analyzing account history for non-natural spikes.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/engagement.png" class="card-img-top" alt="Pods">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Comment Pod Detection</h5>
-                                <p class="small text-muted">Identifying clusters of artificial engagement groups.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/ai_processing.png" class="card-img-top service-img" alt="Pods">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Comment Pod Detection</h5>
+                                <p class="small text-muted mb-4">Identifying clusters of artificial engagement groups.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/hero.png" class="card-img-top" alt="Risk">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Influencer Risk Scoring</h5>
-                                <p class="small text-muted">A unified score for candidate risk assessment.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/risk_scoring.png" class="card-img-top service-img" alt="Risk">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Influencer Risk Scoring</h5>
+                                <p class="small text-muted mb-4">A unified score for candidate risk assessment.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 7 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/audit.png" class="card-img-top" alt="Takedown">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Fake Account Takedown</h5>
-                                <p class="small text-muted">Assistance in reporting and removing impersonators.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/expert_review.png" class="card-img-top service-img" alt="Takedown">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Fake Account Takedown</h5>
+                                <p class="small text-muted mb-4">Assistance in reporting and removing impersonators.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service 8 -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="card h-100 overflow-hidden">
-                            <img src="assets/images/engagement.png" class="card-img-top" alt="ROI">
-                            <div class="card-body">
-                                <h5 class="fw-bold">Campaign ROI Protection</h5>
-                                <p class="small text-muted">Pre-campaign audits to ensure budget efficiency.</p>
-                                <a href="service-details.html" class="btn btn-sm btn-outline-primary">Details</a>
+                        <div class="card h-100 service-card overflow-hidden border-0 shadow-sm">
+                            <div class="service-img-container">
+                                <img src="assets/images/audit.png" class="card-img-top service-img" alt="ROI">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h5 class="fw-bold mb-3">Campaign ROI Protection</h5>
+                                <p class="small text-muted mb-4">Pre-campaign audits to ensure budget efficiency.</p>
+                                <a href="service-details.html" class="btn btn-outline-primary mt-auto">Details</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- API Integration -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <img src="assets/images/data_collection.png" alt="API" class="img-fluid rounded-4 shadow-lg hover-scale">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Scale Your Audits with Our API</h2>
+                        <p class="text-muted mb-4">Connect your existing CRM or marketing stack directly to our forensic engine. Automate influencer onboarding and maintain a clean database without manual entry.</p>
+                        <div class="card p-4 border-0 shadow-sm data-card">
+                            <code class="text-secondary">GET /v1/audit/influencer_handle</code>
+                            <p class="small text-muted mt-2 mb-0">99.9% uptime and enterprise-grade security.</p>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary mt-4">Request API Key</a>
                     </div>
                 </div>
             </div>
@@ -182,8 +217,60 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-5 text-center text-white bg-dark">
-        <p class="mb-0">&copy; 2026 TrustShield. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
+                        <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                        <span class="fw-bold fs-4">TrustShield</span>
+                    </a>
+                    <p class="text-muted mb-4">The world's leading freelance agency for influencer authenticity verification and fraud detection forensics.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted mb-4">Get the latest insights on influencer fraud trends.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-secondary" type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-muted">&copy; 2026 TrustShield. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

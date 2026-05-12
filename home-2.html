@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Header (Same as index) -->
+    <!-- Header -->
     <header class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -19,10 +19,10 @@
             </a>
             
             <div class="d-flex align-items-center d-lg-none">
-                <button id="rtlToggle" class="btn btn-link text-primary me-1">
+                <button id="rtlToggle" class="me-2" title="Toggle RTL">
                     <span class="small fw-bold">RTL</span>
                 </button>
-                <button id="themeToggle" class="btn btn-link text-primary me-2">
+                <button id="themeToggle" class="me-2" title="Toggle Theme">
                     <i class="bi bi-moon-fill"></i>
                 </button>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -41,34 +41,34 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <button id="rtlToggle" class="btn btn-link text-primary me-2 d-none d-lg-block">
+                    <button id="rtlToggle" class="me-2 d-none d-lg-block" title="Toggle RTL">
                         <span class="small fw-bold">RTL</span>
                     </button>
-                    <button id="themeToggleDesktop" class="btn btn-link text-primary me-3 d-none d-lg-block">
+                    <button id="themeToggleDesktop" class="me-3 d-none d-lg-block" title="Toggle Theme">
                         <i class="bi bi-moon-fill"></i>
                     </button>
-                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn btn-outline-primary btn-fixed me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-fixed">Sign Up</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold">TrustShield</h5>
+            <h5 class="offcanvas-title fw-bold"><i class="bi bi-shield-check text-secondary me-2"></i>TrustShield</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav mb-4">
-                <li><a class="nav-link" href="index.html">Home 1</a></li>
-                <li><a class="nav-link active" href="home-2.html">Home 2</a></li>
-                <li><a class="nav-link" href="about.html">About</a></li>
-                <li><a class="nav-link" href="services.html">Services</a></li>
-                <li><a class="nav-link" href="blog.html">Blog</a></li>
-                <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <div class="d-grid gap-2">
                 <a href="login.html" class="btn btn-outline-primary">Login</a>
@@ -78,15 +78,17 @@
     </div>
 
     <main>
-        <section class="hero-section text-center">
+        <!-- Alternative Hero -->
+        <section class="hero-section-2 text-center">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
+                        <span class="badge bg-secondary mb-3">Enterprise Forensic Audit</span>
                         <h1 class="display-3 fw-bold mb-4">Stop Wasting Your Marketing Budget on <span class="text-secondary">Fake Influencers</span></h1>
                         <p class="lead mb-5 fs-4">I help brand marketers detect bot followers, engagement fraud, and fake accounts with deep data forensics. Protect your ROI with expert audit reports.</p>
                         <div class="d-flex gap-3 justify-content-center flex-wrap">
-                            <a href="contact.html" class="btn btn-primary btn-lg px-5 shadow hover-scale">Request a Free Audit</a>
-                            <a href="services.html" class="btn btn-outline-primary btn-lg px-5 shadow hover-scale">Explore Services</a>
+                            <a href="contact.html" class="btn btn-primary btn-lg btn-fixed px-5 shadow hover-scale">Request a Free Audit</a>
+                            <a href="services.html" class="btn btn-hero-outline btn-lg btn-fixed px-5 shadow hover-scale">Explore Services</a>
                         </div>
                     </div>
                 </div>
@@ -142,6 +144,68 @@
             </div>
         </section>
 
+        <!-- New Section 1: Forensic Methodology -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Deep-Dive Forensic Analysis</h2>
+                        <p class="text-muted mb-4">Our methodology goes beyond surface-level metrics. We analyze the "digital DNA" of every account to ensure you are investing in real influence.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-check text-secondary me-3 fs-4"></i> <span>Automated Bot Pattern Recognition</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-check text-secondary me-3 fs-4"></i> <span>Historical Audience Consistency Checks</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-check text-secondary me-3 fs-4"></i> <span>Engagement Quality Forensics</span></li>
+                        </ul>
+                        <a href="services.html" class="btn btn-outline-primary px-4 mt-3">Learn More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="assets/images/audit.png" alt="Forensic Analysis" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section 2: Data Ingestion -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Omnichannel Data Integrity</h2>
+                        <p class="text-muted mb-4">We aggregate data from across the social ecosystem to provide a 360-degree view of an influencer's true reach and authenticity.</p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 border rounded-3 bg-light-subtle data-card text-center">
+                                    <h6 class="fw-bold mb-1">API Integrations</h6>
+                                    <p class="small text-muted mb-0">Direct platform access</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border rounded-3 bg-light-subtle data-card text-center">
+                                    <h6 class="fw-bold mb-1">Real-time Scraping</h6>
+                                    <p class="small text-muted mb-0">Live engagement tracking</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border rounded-3 bg-light-subtle data-card text-center">
+                                    <h6 class="fw-bold mb-1">Sentiment Analysis</h6>
+                                    <p class="small text-muted mb-0">Comment authenticity</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border rounded-3 bg-light-subtle data-card text-center">
+                                    <h6 class="fw-bold mb-1">Risk Modeling</h6>
+                                    <p class="small text-muted mb-0">Predictive fraud scores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="assets/images/data_collection.png" alt="Data Stream" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Pricing Preview -->
         <section class="py-5 bg-light">
             <div class="container">
@@ -169,44 +233,90 @@
                 </div>
             </div>
         </section>
+        <!-- Global Integrity Network -->
+        <section class="py-5 bg-dark text-white overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold display-5 mb-4">A Global Network of Trust</h2>
+                        <p class="lead opacity-75 mb-5">We monitor over 10 million influencers across 50+ countries. Our global data nodes provide real-time updates on emerging fraud patterns worldwide.</p>
+                        <div class="row g-4 text-center">
+                            <div class="col-4">
+                                <h1 class="fw-bold text-secondary">50+</h1>
+                                <p class="small">Countries</p>
+                            </div>
+                            <div class="col-4">
+                                <h1 class="fw-bold text-secondary">10M+</h1>
+                                <p class="small">Influencers</p>
+                            </div>
+                            <div class="col-4">
+                                <h1 class="fw-bold text-secondary">99.9%</h1>
+                                <p class="small">Accuracy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <i class="bi bi-globe-americas display-1 opacity-25"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer (Same as index) -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4">
-                    <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
                         <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
                         <span class="fw-bold fs-4">TrustShield</span>
                     </a>
-                    <p class="text-muted">Integrity in every impression. Protecting brands from influencer fraud.</p>
+                    <p class="text-muted mb-4">The world's leading freelance agency for influencer authenticity verification and fraud detection forensics.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
                 </div>
-                <div class="col-lg-2">
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6">
                     <h5 class="fw-bold mb-4">Company</h5>
                     <ul class="list-unstyled">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2">
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6">
                     <h5 class="fw-bold mb-4">Support</h5>
                     <ul class="list-unstyled">
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
                     <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted mb-4">Get the latest insights on influencer fraud trends.</p>
                     <form class="d-flex gap-2">
-                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Email">
-                        <button class="btn btn-secondary">Join</button>
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-secondary" type="submit">Join</button>
                     </form>
                 </div>
             </div>
             <hr class="my-4 border-secondary opacity-25">
-            <p class="text-center text-muted">&copy; 2026 TrustShield. All rights reserved.</p>
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-muted">&copy; 2026 TrustShield. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
