@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustShield | Freelance Influencer Fraud Detection Analyst</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                <span class="fw-bold fs-4">TrustShield</span>
+            </a>
+            
+            <div class="d-flex align-items-center d-lg-none">
+                <button id="rtlToggle" class="me-2" title="Toggle RTL">
+                    <span class="small fw-bold">RTL</span>
+                </button>
+                <button id="themeToggle" class="me-2" title="Toggle Theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <button id="rtlToggle" class="me-2 d-none d-lg-block" title="Toggle RTL">
+                        <span class="small fw-bold">RTL</span>
+                    </button>
+                    <button id="themeToggleDesktop" class="me-3 d-none d-lg-block" title="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold"><i class="bi bi-shield-check text-secondary me-2"></i>TrustShield</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav mb-4">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-center text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="display-3 fw-bold mb-4">Stop Wasting Your Marketing Budget on <span class="text-secondary">Fake Influencers</span></h1>
+                        <p class="lead mb-5 text-white fs-4">I help brand marketers detect bot followers, engagement fraud, and fake accounts with deep data forensics. Protect your ROI with expert audit reports.</p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="contact.html" class="btn btn-primary btn-lg px-5 shadow hover-scale">Request a Free Audit</a>
+                            <a href="services.html" class="btn btn-outline-light btn-lg px-5 shadow hover-scale">Explore Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (1) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Why Real Data Matters</h2>
+                    <p class="text-muted">Over 45% of influencers use some form of engagement manipulation.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-robot text-secondary fs-1 mb-3"></i>
+                            <h4 class="fw-bold">Bot Detection</h4>
+                            <p class="text-muted">Identify fake follower patterns and automated engagement using advanced forensic tools.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-graph-up-arrow text-secondary fs-1 mb-3"></i>
+                            <h4 class="fw-bold">Engagement Audit</h4>
+                            <p class="text-muted">Verify if likes and comments are coming from real, target-relevant accounts or pods.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-clipboard-data text-secondary fs-1 mb-3"></i>
+                            <h4 class="fw-bold">Risk Scoring</h4>
+                            <p class="text-muted">Get a comprehensive risk score for every influencer handle before you sign the contract.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Content Section (2) -->
+        <section class="py-5 bg-light-subtle">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-4 h1">Unmasking the <span class="text-secondary">Shadow Market</span></h2>
+                        <p class="mb-5 lead text-muted">The influencer industry is riddled with "engagement pods" and purchased metrics. My methodology goes beyond simple follow-to-like ratios to find the hidden patterns of fraud.</p>
+                        
+                        <div class="row g-4 mb-5 text-start justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-secondary me-2"></i> <span>Historical growth patterns</span></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-secondary me-2"></i> <span>Audience demographics</span></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-secondary me-2"></i> <span>Comment authenticity</span></div>
+                            </div>
+                        </div>
+                        
+                        <a href="about.html" class="btn btn-primary btn-lg px-5 shadow hover-scale">Learn My Methodology</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section (3) -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md-3">
+                        <h2 class="fw-bold display-5">500+</h2>
+                        <p class="mb-0 opacity-75">Influencer Audits</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="fw-bold display-5">$2M+</h2>
+                        <p class="mb-0 opacity-75">Budget Saved</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="fw-bold display-5">98%</h2>
+                        <p class="mb-0 opacity-75">Detection Accuracy</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="fw-bold display-5">50+</h2>
+                        <p class="mb-0 opacity-75">Global Brands</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section (4) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">How I Detect Fraud</h2>
+                    <p class="text-muted">A systematic approach to verifying influencer authenticity.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center p-4">
+                            <div class="bg-secondary-light rounded-circle p-4 d-inline-block mb-3">
+                                <i class="bi bi-search text-secondary fs-2"></i>
+                            </div>
+                            <h5 class="fw-bold">Data Collection</h5>
+                            <p class="small text-muted">Gathering deep-level API data from social platforms.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center p-4">
+                            <div class="bg-secondary-light rounded-circle p-4 d-inline-block mb-3">
+                                <i class="bi bi-cpu text-secondary fs-2"></i>
+                            </div>
+                            <h5 class="fw-bold">AI Processing</h5>
+                            <p class="small text-muted">Running datasets through proprietary detection algorithms.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center p-4">
+                            <div class="bg-secondary-light rounded-circle p-4 d-inline-block mb-3">
+                                <i class="bi bi-person-check text-secondary fs-2"></i>
+                            </div>
+                            <h5 class="fw-bold">Expert Review</h5>
+                            <p class="small text-muted">Manual verification of edge cases by human forensic analysts.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center p-4">
+                            <div class="bg-secondary-light rounded-circle p-4 d-inline-block mb-3">
+                                <i class="bi bi-file-earmark-bar-graph text-secondary fs-2"></i>
+                            </div>
+                            <h5 class="fw-bold">Final Report</h5>
+                            <p class="small text-muted">Clear "Buy/Don't Buy" recommendation with supporting data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section (5) -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Trusted by Marketing Leaders</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card p-4 border-0 shadow-sm">
+                            <p class="fst-italic text-muted">"TrustShield uncovered that one of our top prospects had 60% bot followers. They saved us a $50k mistake in just one audit."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-secondary rounded-circle me-3" style="width: 50px; height: 50px;"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                                    <small class="text-muted">Marketing Director, TechFlow</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 border-0 shadow-sm">
+                            <p class="fst-italic text-muted">"The risk scores are now a mandatory part of our influencer onboarding process. Professional, fast, and incredibly accurate."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-secondary rounded-circle me-3" style="width: 50px; height: 50px;"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Marcus Thorne</h6>
+                                    <small class="text-muted">Head of Growth, LuxMedia</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section (6) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="bg-primary text-white p-5 rounded-4 text-center">
+                    <h2 class="fw-bold mb-4">Ready to Audit Your Next Campaign?</h2>
+                    <p class="lead mb-4 opacity-75">Don't sign that contract until you know the truth about their audience.</p>
+                    <a href="contact.html" class="btn btn-secondary btn-lg px-5">Get Your First Audit Free</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+                        <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                        <span class="fw-bold fs-4">TrustShield</span>
+                    </a>
+                    <p class="text-muted mb-4">The world's leading freelance agency for influencer authenticity verification and fraud detection forensics.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted mb-4">Get the latest insights on influencer fraud trends.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Enter email">
+                        <button class="btn btn-secondary" type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-muted">&copy; 2026 TrustShield. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <button id="rtlToggle" onclick="toggleRTL()" class="btn btn-sm btn-outline-secondary">RTL Support</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-secondary btn-lg rounded-circle">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

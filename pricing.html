@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | TrustShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                <span class="fw-bold fs-4">TrustShield</span>
+            </a>
+            
+            <div class="d-flex align-items-center d-lg-none">
+                <button id="rtlToggle" class="btn btn-link text-primary me-1">
+                    <span class="small fw-bold">RTL</span>
+                </button>
+                <button id="themeToggle" class="btn btn-link text-primary me-2">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <button id="rtlToggle" class="btn btn-link text-primary me-2 d-none d-lg-block">
+                        <span class="small fw-bold">RTL</span>
+                    </button>
+                    <button id="themeToggleDesktop" class="btn btn-link text-primary me-3 d-none d-lg-block">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold"><i class="bi bi-shield-check text-secondary me-2"></i>TrustShield</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav mb-4">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="py-5 bg-primary text-white text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Transparent Pricing</h1>
+                <p class="lead opacity-75">No hidden fees. Choose the plan that fits your campaign scale.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Starter -->
+                    <div class="col-lg-4">
+                        <div class="card p-5 h-100 text-center">
+                            <h5 class="fw-bold">Starter</h5>
+                            <h1 class="fw-bold my-4">$99<span class="fs-6 text-muted fw-normal"> / month</span></h1>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-3">3 Audits per month</li>
+                                <li class="mb-3">Basic Bot Detection</li>
+                                <li class="mb-3">PDF Reports</li>
+                                <li class="mb-3 text-muted"><s>Email Support</s></li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- Professional -->
+                    <div class="col-lg-4">
+                        <div class="card p-5 h-100 text-center border-secondary shadow scale-up">
+                            <div class="badge bg-secondary mb-3 w-50 mx-auto">Most Popular</div>
+                            <h5 class="fw-bold">Professional</h5>
+                            <h1 class="fw-bold my-4">$299<span class="fs-6 text-muted fw-normal"> / month</span></h1>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-3">12 Audits per month</li>
+                                <li class="mb-3">Advanced Forensics</li>
+                                <li class="mb-3">Risk Scoring</li>
+                                <li class="mb-3">Priority Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-auto">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="col-lg-4">
+                        <div class="card p-5 h-100 text-center">
+                            <h5 class="fw-bold">Enterprise</h5>
+                            <h1 class="fw-bold my-4">Custom</h1>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-3">Unlimited Audits</li>
+                                <li class="mb-3">API Access</li>
+                                <li class="mb-3">Dedicated Analyst</li>
+                                <li class="mb-3">Custom Reporting</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-primary mt-auto">Contact Sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 text-center text-white bg-dark">
+        <p class="mb-0">&copy; 2026 TrustShield. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
