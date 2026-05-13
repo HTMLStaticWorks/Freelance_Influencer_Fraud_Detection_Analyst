@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | TrustShield</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,7 +16,7 @@
     <header class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                <img src="assets/images/logo.svg" alt="TrustShield Logo" width="40" height="40" class="me-2">
                 <span class="fw-bold fs-4">TrustShield</span>
             </a>
             
@@ -57,7 +59,10 @@
     <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold"><i class="bi bi-shield-check text-secondary me-2"></i>TrustShield</h5>
+            <h5 class="offcanvas-title fw-bold">
+                <img src="assets/images/logo.svg" alt="TrustShield Logo" width="30" height="30" class="me-2">
+                TrustShield
+            </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -92,11 +97,11 @@
                     <div class="col-md-4">
                         <div class="card h-100">
                             <img src="assets/images/audit.png" class="card-img-top" alt="Blog">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <div class="mb-2"><span class="badge bg-secondary-light text-secondary">Bot Detection</span></div>
                                 <h5 class="fw-bold">How Bot Farms are Evolving in 2026</h5>
                                 <p class="small text-muted">A deep dive into the new AI-generated influencer accounts that are harder to detect than ever.</p>
-                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none mt-auto">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -104,11 +109,11 @@
                     <div class="col-md-4">
                         <div class="card h-100">
                             <img src="assets/images/engagement.png" class="card-img-top" alt="Blog">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <div class="mb-2"><span class="badge bg-secondary-light text-secondary">Case Study</span></div>
                                 <h5 class="fw-bold">Case Study: The $100k Influencer Scam</h5>
                                 <p class="small text-muted">How a major fashion brand almost partnered with a bot-inflated account.</p>
-                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none mt-auto">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -116,11 +121,11 @@
                     <div class="col-md-4">
                         <div class="card h-100">
                             <img src="assets/images/hero.png" class="card-img-top" alt="Blog">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <div class="mb-2"><span class="badge bg-secondary-light text-secondary">ROI</span></div>
                                 <h5 class="fw-bold">Calculating Your Influencer ROI Correctlly</h5>
                                 <p class="small text-muted">Why raw numbers don't tell the full story without authenticity verification.</p>
-                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+                                <a href="blog-details.html" class="link-primary fw-bold text-decoration-none mt-auto">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -200,27 +205,30 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-5 bg-secondary text-white text-center">
+        <section class="py-5 my-lg-5">
             <div class="container">
-                <h2 class="fw-bold mb-4">Master the Art of Influencer Auditing</h2>
-                <p class="lead mb-4 opacity-75">Join our weekly newsletter for forensic deep-dives and market fraud alerts.</p>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form class="d-flex gap-2">
-                            <input type="email" class="form-control" placeholder="Your email address">
-                            <button class="btn btn-dark" type="submit">Subscribe</button>
-                        </form>
+                <div class="cta-box p-5 rounded-4 text-center shadow-lg">
+                    <h2 class="fw-bold mb-4">Master the Art of Influencer Auditing</h2>
+                    <p class="lead mb-4">Join our weekly newsletter for forensic deep-dives and market fraud alerts.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form class="d-flex gap-2">
+                                <input type="email" class="form-control" placeholder="Your email address">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
         <!-- Expert Webinars -->
-        <section class="py-5 bg-dark text-white">
+        <section class="py-5 bg-secondary-light my-lg-5">
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6">
                         <h2 class="fw-bold mb-4">Join Our Forensic Masterclass</h2>
-                        <p class="lead opacity-75 mb-4">Every month, we host a deep-dive webinar into the latest "Human-Mimic" bot trends and how to protect your brand spend.</p>
-                        <a href="#" class="btn btn-secondary btn-lg px-5">Register for Next Session</a>
+                        <p class="lead text-muted mb-4">Every month, we host a deep-dive webinar into the latest "Human-Mimic" bot trends and how to protect your brand spend.</p>
+                        <a href="#" class="btn btn-primary btn-lg px-5 shadow">Register for Next Session</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden border border-secondary border-opacity-25">
@@ -242,7 +250,7 @@
                 <!-- Column 1: Brand -->
                 <div class="col-lg-4 col-md-6">
                     <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
-                        <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                        <img src="assets/images/logo.svg" alt="TrustShield Logo" width="40" height="40" class="me-2">
                         <span class="fw-bold fs-4">TrustShield</span>
                     </a>
                     <p class="text-muted mb-4">The world's leading freelance agency for influencer authenticity verification and fraud detection forensics.</p>
@@ -291,6 +299,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-secondary btn-lg rounded-circle">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

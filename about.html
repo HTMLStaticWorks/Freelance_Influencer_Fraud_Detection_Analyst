@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | TrustShield</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,15 +16,15 @@
     <header class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                <img src="assets/images/logo.svg" alt="TrustShield Logo" width="40" height="40" class="me-2">
                 <span class="fw-bold fs-4">TrustShield</span>
             </a>
             
             <div class="d-flex align-items-center d-lg-none">
-                <button id="rtlToggle" class="btn btn-link text-primary me-1">
+                <button id="rtlToggle" class="me-2" title="Toggle RTL">
                     <span class="small fw-bold">RTL</span>
                 </button>
-                <button id="themeToggle" class="btn btn-link text-primary me-2">
+                <button id="themeToggle" class="me-2" title="Toggle Theme">
                     <i class="bi bi-moon-fill"></i>
                 </button>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -41,10 +43,10 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <button id="rtlToggle" class="btn btn-link text-primary me-2 d-none d-lg-block">
+                    <button id="rtlToggle" class="me-2 d-none d-lg-block" title="Toggle RTL">
                         <span class="small fw-bold">RTL</span>
                     </button>
-                    <button id="themeToggleDesktop" class="btn btn-link text-primary me-3 d-none d-lg-block">
+                    <button id="themeToggleDesktop" class="me-3 d-none d-lg-block" title="Toggle Theme">
                         <i class="bi bi-moon-fill"></i>
                     </button>
                     <a href="login.html" class="btn btn-outline-primary btn-fixed me-2">Login</a>
@@ -57,7 +59,10 @@
     <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold"><i class="bi bi-shield-check text-secondary me-2"></i>TrustShield</h5>
+            <h5 class="offcanvas-title fw-bold">
+                <img src="assets/images/logo.svg" alt="TrustShield Logo" width="30" height="30" class="me-2">
+                TrustShield
+            </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -227,7 +232,7 @@
                 <!-- Column 1: Brand -->
                 <div class="col-lg-4 col-md-6">
                     <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
-                        <i class="bi bi-shield-check text-secondary me-2 fs-3"></i>
+                        <img src="assets/images/logo.svg" alt="TrustShield Logo" width="40" height="40" class="me-2">
                         <span class="fw-bold fs-4">TrustShield</span>
                     </a>
                     <p class="text-muted mb-4">The world's leading freelance agency for influencer authenticity verification and fraud detection forensics.</p>
@@ -276,6 +281,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-secondary btn-lg rounded-circle">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
