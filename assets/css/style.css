@@ -40,7 +40,7 @@ body {
 /* Contrast Fixes */
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
 }
 h1.fw-bold, h2.fw-bold, h3.fw-bold, h4.fw-bold, h5.fw-bold, h6.fw-bold,
 h1.fw-semibold, h2.fw-semibold, h3.fw-semibold, h4.fw-semibold, h5.fw-semibold, h6.fw-semibold {
@@ -692,6 +692,7 @@ footer a:hover {
 [data-bs-theme="dark"] #themeToggleDesktop, 
 [data-bs-theme="dark"] #rtlToggle {
     border: 1px solid rgba(255,255,255,0.1);
+    background-color: transparent !important;
 }
 
 #themeToggle:hover, #themeToggleDesktop:hover, #rtlToggle:hover {
