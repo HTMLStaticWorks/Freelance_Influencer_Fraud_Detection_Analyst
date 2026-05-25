@@ -32,7 +32,8 @@ themeToggles.forEach(btn => {
 });
 
 // RTL Toggle
-const rtlToggles = document.querySelectorAll('#rtlToggle');
+// include auth page button (#rtlToggle) and any elements with .rtl-toggle
+const rtlToggles = document.querySelectorAll('.rtl-toggle, #rtlToggle');
 
 function updateRTL(isRTL) {
     if (isRTL) {

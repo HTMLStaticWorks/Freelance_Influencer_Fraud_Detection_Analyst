@@ -2,6 +2,8 @@
     --primary-color: #000000;
     --secondary-color: #0ea5e9;
     --tertiary-color: #ffffff;
+    --sidebar-bg: #f3f4f6; /* light grey for light mode sidebar */
+    --sidebar-text: #0f172a; /* dark text on light sidebar */
     --text-main: #000000;
     --text-muted: #000000;
     --hero-overlay: rgba(0, 0, 0, 0.82);
@@ -16,6 +18,8 @@
     --primary-color: #f8fafc;
     --secondary-color: #38bdf8;
     --tertiary-color: #020617;
+    --sidebar-bg: #000000; /* dark mode sidebar should be black */
+    --sidebar-text: #ffffff;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
     --hero-overlay: rgba(0, 0, 0, 0.85);
@@ -36,7 +40,11 @@ body {
 /* Contrast Fixes */
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
-    font-weight: 700;
+    font-weight: 500 !important;
+}
+h1.fw-bold, h2.fw-bold, h3.fw-bold, h4.fw-bold, h5.fw-bold, h6.fw-bold,
+h1.fw-semibold, h2.fw-semibold, h3.fw-semibold, h4.fw-semibold, h5.fw-semibold, h6.fw-semibold {
+    font-weight: 500 !important;
 }
 
 p, span, li, .lead, .small {
@@ -52,6 +60,22 @@ p, span, li, .lead, .small {
 [data-bs-theme="dark"] .bg-body-tertiary,
 [data-bs-theme="dark"] .bg-light-subtle {
     background-color: #1e293b !important; /* Slightly lighter than deep dark but still dark */
+    color: #f8fafc !important;
+}
+
+[data-bs-theme="dark"] .table thead th,
+[data-bs-theme="dark"] .table tbody td,
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+    border-color: rgba(255,255,255,0.08);
+}
+
+[data-bs-theme="dark"] .badge.bg-light {
+    background-color: #475569 !important;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .badge.bg-light.text-dark {
+    color: #ffffff !important;
 }
 
 /* Typography */
@@ -162,16 +186,69 @@ p, span, li, .lead, .small {
     cursor: pointer;
 }
 
+.user-profile-pill .text-muted,
+.user-profile-pill .fw-bold {
+    color: #0f172a !important;
+}
+
+.user-profile-pill .text-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-profile-pill {
+    align-items: center !important;
+}
+
+/* Dark mode adjustments for profile pill */
+[data-bs-theme="dark"] .user-profile-pill {
+    background-color: #0b1220 !important;
+    border-color: rgba(255,255,255,0.06) !important;
+}
+
+[data-bs-theme="dark"] .user-profile-pill .text-muted,
+[data-bs-theme="dark"] .user-profile-pill .fw-bold {
+    color: #f1f5f9 !important;
+}
+
+/* Welcome top visibility */
+.welcome-top .text-muted {
+    color: var(--text-muted) !important;
+}
+.welcome-top .fw-bold {
+    color: var(--primary-color) !important;
+}
+[data-bs-theme="dark"] .welcome-top .text-muted,
+[data-bs-theme="dark"] .welcome-top .fw-bold {
+    color: #f1f5f9 !important;
+}
+
+/* Increase welcome text size for visibility */
+.welcome-top .small {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin: 0;
+}
+[data-bs-theme="dark"] .welcome-top .text-muted,
+[data-bs-theme="dark"] .welcome-top .fw-bold {
+    color: #f1f5f9 !important;
+}
+
 [data-bs-theme="dark"] #themeToggleDesktop, 
 [data-bs-theme="dark"] #themeToggle, 
 [data-bs-theme="dark"] #rtlToggle {
     border-color: rgba(255,255,255,0.1);
 }
 
-#themeToggleDesktop:hover, #themeToggle:hover, #rtlToggle:hover {
+#themeToggleDesktop:hover, #themeToggle:hover, #rtlToggle:hover, .rtl-toggle:hover {
     background-color: var(--secondary-color);
     color: #ffffff !important;
     border-color: var(--secondary-color);
+}
+
+.rtl-toggle:hover span {
+    color: #ffffff !important;
 }
 
 .nav-link {
@@ -513,15 +590,16 @@ footer a:hover {
 /* Dashboard */
 .sidebar {
     height: 100vh;
-    background-color: #0f172a;
-    color: white;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
     position: fixed;
     width: 250px;
     padding-top: 20px;
+    border-right: 1px solid rgba(15,23,42,0.06);
 }
 
 .sidebar-link {
-    color: #cbd5e1;
+    color: var(--sidebar-text);
     padding: 12px 25px;
     display: block;
     text-decoration: none;
@@ -529,9 +607,33 @@ footer a:hover {
 }
 
 .sidebar-link:hover, .sidebar-link.active {
-    background-color: #1e293b;
-    color: #0ea5e9;
-    border-left: 4px solid #0ea5e9;
+    background-color: rgba(14,165,233,0.06);
+    color: var(--sidebar-text);
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Stronger active state */
+.sidebar-link.active {
+    background-color: rgba(14,165,233,0.12) !important;
+    color: var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .sidebar-link:hover, [data-bs-theme="dark"] .sidebar-link.active {
+    background-color: rgba(56,189,248,0.10) !important;
+    color: #ffffff !important;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* RTL: flip sidebar active indicator from left to right and remove left border */
+[dir="rtl"] .sidebar-link:hover, [dir="rtl"] .sidebar-link.active {
+    border-left: none !important;
+    border-right: 4px solid var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] [dir="rtl"] .sidebar-link:hover, [data-bs-theme="dark"] [dir="rtl"] .sidebar-link.active {
+    border-left: none !important;
+    border-right: 4px solid var(--secondary-color) !important;
+    color: #ffffff !important;
 }
 
 .main-content {
@@ -641,6 +743,122 @@ footer a:hover {
     margin-left: 0;
 }
 
+/* Mobile dashboard improvements */
+@media (max-width: 991px) {
+    .main-content {
+        padding: 20px;
+    }
+    .mobile-dashboard-header {
+        background-color: var(--sidebar-bg);
+        color: var(--sidebar-text);
+        padding: 12px 16px;
+    }
+    #themeToggle {
+        display: none !important;
+    }
+    /* Hide the desktop RTL button near New Audit (keep mobile header RTL intact) */
+    .main-content .rtl-toggle {
+        display: none !important;
+    }
+    /* Also hide the desktop theme toggle near New Audit */
+    .main-content #themeToggle {
+        display: none !important;
+    }
+}
+
+/* Ensure mobile offcanvas matches desktop sidebar colors */
+.offcanvas,
+.offcanvas .offcanvas-header {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+}
+.offcanvas .sidebar-link,
+.offcanvas .offcanvas-title,
+.offcanvas .navbar-brand,
+.offcanvas .offcanvas-header .navbar-brand,
+.offcanvas .offcanvas-header h5 {
+    color: var(--sidebar-text) !important;
+}
+
+[data-bs-theme="dark"] .offcanvas,
+[data-bs-theme="dark"] .offcanvas .offcanvas-header {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+}
+
+/* Adaptive offcanvas close button for light/dark mode */
+.offcanvas .btn-close {
+    filter: brightness(0) saturate(100%) !important;
+    opacity: 1 !important;
+}
+
+[data-bs-theme="dark"] .offcanvas .btn-close {
+    filter: invert(1) brightness(1.2) !important;
+}
+
+/* Navbar brand visibility in light mode mobile */
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand span {
+    color: var(--primary-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-brand,
+[data-bs-theme="dark"] .navbar-brand span {
+    color: #ffffff !important;
+}
+
+/* Offcanvas title visibility */
+.offcanvas-title {
+    color: var(--sidebar-text) !important;
+}
+
+[data-bs-theme="dark"] .sidebar {
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 576px) {
+    .row.g-4 .col-md-3 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .table-responsive table {
+        font-size: 13px;
+    }
+    .card.p-4 {
+        padding: 1rem !important;
+    }
+}
+
+/* Dashboard section switching */
+.dashboard-section {
+    display: none;
+}
+.dashboard-section.active {
+    display: block;
+}
+
+/* Ensure brand/site name remains white in dark/offcanvas only */
+[data-bs-theme="dark"] .sidebar .navbar-brand,
+.offcanvas .offcanvas-title,
+[data-bs-theme="dark"] .d-lg-none .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Tweak offcanvas (mobile sidebar) width for small screens */
+.offcanvas.offcanvas-start,
+.offcanvas.offcanvas-end {
+    width: 260px;
+}
+
+/* Mobile header theme overrides */
+[data-bs-theme="dark"] .mobile-dashboard-header {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 @media (max-width: 991px) {
     .main-content {
         margin-left: 0;
@@ -724,4 +942,115 @@ footer a:hover {
 .cta-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2) !important;
+}
+
+/* Custom TrustShield Premium Overrides */
+
+/* Mobile Card Responsive Padding Fix for Viewports <= 480px */
+@media (max-width: 480px) {
+    .card.p-5 {
+        padding: 1.5rem !important;
+    }
+}
+
+/* RTL Password and Input Group Alignment */
+[dir="rtl"] .input-group {
+    flex-direction: row-reverse;
+}
+[dir="rtl"] .input-group > .form-control {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    text-align: right;
+}
+[dir="rtl"] .input-group > .btn {
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 1px solid #dee2e6 !important;
+    border-left: 1px solid #dee2e6 !important;
+}
+[dir="rtl"] .input-group > .btn.border-start-0 {
+    border-right: 0 !important;
+}
+[data-bs-theme="dark"] [dir="rtl"] .input-group > .btn {
+    border-right: 1px solid rgba(255,255,255,0.1) !important;
+    border-left: 1px solid rgba(255,255,255,0.1) !important;
+}
+[data-bs-theme="dark"] [dir="rtl"] .input-group > .btn.border-start-0 {
+    border-right: 0 !important;
+}
+
+/* Eye icon inside input (auth pages) */
+.input-group {
+    position: relative;
+}
+
+.input-group > .form-control {
+    padding-right: 3rem; /* space for the eye icon */
+}
+
+.input-group > .btn.border-start-0 {
+    position: absolute;
+    right: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0.25rem 0.35rem !important;
+    height: auto !important;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .input-group > .form-control {
+    padding-right: 0.75rem;
+    padding-left: 3rem; /* space for the eye icon on the left */
+}
+
+[dir="rtl"] .input-group > .btn.border-start-0 {
+    left: 0.6rem;
+    right: auto;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Reduce visual clutter on small screens */
+@media (max-width: 576px) {
+    .input-group > .form-control {
+        padding-right: 2.2rem;
+    }
+    [dir="rtl"] .input-group > .form-control {
+        padding-left: 2.2rem;
+    }
+}
+
+/* RTL Navigation CTA Button Padding & Margin Fixes */
+[dir="rtl"] .navbar .btn-fixed.me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+[dir="rtl"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+[dir="rtl"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+/* Dark Mode Hover Visibility for Data Cards (Pillars & Scale Audits) */
+.data-card:hover i,
+.data-card:hover .text-secondary,
+.data-card:hover h4,
+.data-card:hover h6,
+.data-card:hover p,
+.data-card:hover code {
+    color: #ffffff !important;
 }

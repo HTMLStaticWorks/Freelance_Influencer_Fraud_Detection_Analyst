@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | TrustShield</title>
+    <link rel="icon" href="assets/images/logo.svg">
+    <link rel="shortcut icon" href="assets/images/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,32 +26,37 @@
             <a href="#orders" class="sidebar-link"><i class="bi bi-cart me-3"></i> Audit Reports</a>
             <a href="#messages" class="sidebar-link"><i class="bi bi-chat-dots me-3"></i> Messages</a>
             <hr class="mx-3 opacity-25">
-            <a href="index.html" class="sidebar-link"><i class="bi bi-house me-3"></i> Back to Site</a>
-            <a href="login.html" class="sidebar-link text-danger mt-5"><i class="bi bi-box-arrow-left me-3"></i> Logout</a>
+            <a href="index.html" class="sidebar-link text-danger mt-5"><i class="bi bi-box-arrow-left me-3"></i> Logout</a>
         </nav>
     </div>
 
     <!-- Mobile Dashboard Header -->
-    <div class="d-lg-none bg-dark text-white p-3 d-flex justify-content-between align-items-center sticky-top">
-        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+    <div class="mobile-dashboard-header d-lg-none p-3 d-flex justify-content-between align-items-center sticky-top">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
             <i class="bi bi-shield-check text-secondary me-2 fs-4"></i>
             <span class="fw-bold fs-5">TrustShield</span>
         </a>
         <div class="d-flex align-items-center">
-            <button id="rtlToggle" class="btn btn-link text-white me-2 p-0">
+            <button id="rtlToggle" class="btn btn-link me-2 p-0 rtl-toggle">
                 <span class="small fw-bold">RTL</span>
             </button>
-            <button class="btn btn-link text-white p-0" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">
+            <button id="themeToggleDesktop" class="btn btn-link me-2 p-0">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+            <button class="btn btn-link p-0" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">
                 <i class="bi bi-list fs-2"></i>
             </button>
         </div>
     </div>
 
     <!-- Mobile Sidebar Offcanvas -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebarMobile" style="width: 250px;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarMobile" style="width: 250px;">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold">TrustShield</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-shield-check text-secondary me-2 fs-4"></i>
+                <span class="fw-bold fs-5 mb-0">TrustShield</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body p-0">
             <nav class="sidebar-nav">
@@ -65,13 +72,22 @@
     <div class="main-content">
         <div class="container-fluid">
             <!-- Header Section -->
-            <div class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
                 <div>
+                    <div class="welcome-top mb-2">
+                        <p class="mb-0 small text-muted">Welcome back Sofia Park</p>
+                    </div>
                     <h2 class="fw-bold mb-1">Campaign Analytics</h2>
-                    <p class="text-muted small mb-0">Welcome back, Marketer. Here is your brand health summary.</p>
+                    <p class="text-muted small mb-0">Here is your brand health summary.</p>
                 </div>
-                <div class="d-flex gap-3">
-                    <button id="rtlToggle" class="btn btn-outline-secondary btn-sm rounded-circle p-2">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="user-profile-pill d-none d-md-flex align-items-center rounded-pill px-3 py-2 border bg-white shadow-sm">
+                        <img src="assets/images/expert_review.png" alt="User avatar" class="rounded-circle" width="40" height="40">
+                        <div class="ms-3 text-end">
+                            <p class="mb-0 fw-bold">Sofia Park</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-secondary btn-sm rounded-circle p-2 rtl-toggle">
                         <span class="small fw-bold">RTL</span>
                     </button>
                     <button id="themeToggle" class="btn btn-outline-secondary btn-sm rounded-circle p-2">
@@ -81,113 +97,230 @@
                 </div>
             </div>
 
-            <!-- Stats Row -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-3">
-                    <div class="card p-4 text-center">
-                        <h6 class="text-muted small fw-bold mb-3">TOTAL AUDITS</h6>
-                        <h3 class="fw-bold mb-0">128</h3>
-                        <span class="badge bg-success-subtle text-success mt-2 small">+12% this month</span>
+            <!-- Sections -->
+            <section id="analytics" class="dashboard-section active">
+                <!-- Stats Row -->
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card p-4 text-center">
+                            <h6 class="text-muted small fw-bold mb-3">TOTAL AUDITS</h6>
+                            <h3 class="fw-bold mb-0">128</h3>
+                            <span class="badge bg-success-subtle text-success mt-2 small">+12% this month</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-4 text-center">
-                        <h6 class="text-muted small fw-bold mb-3">FRAUD DETECTED</h6>
-                        <h3 class="fw-bold mb-0">34</h3>
-                        <span class="badge bg-danger-subtle text-danger mt-2 small">High Priority</span>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card p-4 text-center">
+                            <h6 class="text-muted small fw-bold mb-3">FRAUD DETECTED</h6>
+                            <h3 class="fw-bold mb-0">34</h3>
+                            <span class="badge bg-danger-subtle text-danger mt-2 small">High Priority</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-4 text-center">
-                        <h6 class="text-muted small fw-bold mb-3">BUDGET SAVED</h6>
-                        <h3 class="fw-bold mb-0">$12,450</h3>
-                        <span class="badge bg-info-subtle text-info mt-2 small">ROI Optimized</span>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card p-4 text-center">
+                            <h6 class="text-muted small fw-bold mb-3">BUDGET SAVED</h6>
+                            <h3 class="fw-bold mb-0">$12,450</h3>
+                            <span class="badge bg-info-subtle text-info mt-2 small">ROI Optimized</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-4 text-center">
-                        <h6 class="text-muted small fw-bold mb-3">AVG RISK SCORE</h6>
-                        <h3 class="fw-bold mb-0">2.4 / 10</h3>
-                        <span class="badge bg-success-subtle text-success mt-2 small">Low Risk</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Table Section -->
-            <div class="card p-4 mb-5 border-0 shadow-sm">
-                <h5 class="fw-bold mb-4">Recent Candidate Audits</h5>
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle">
-                        <thead class="bg-light">
-                            <tr>
-                                <th class="border-0">Handle</th>
-                                <th class="border-0">Followers</th>
-                                <th class="border-0">Bot Score</th>
-                                <th class="border-0">Status</th>
-                                <th class="border-0">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>@travel_lexi</td>
-                                <td>45.2K</td>
-                                <td><span class="text-success fw-bold">12%</span></td>
-                                <td><span class="badge bg-success">Safe</span></td>
-                                <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
-                            </tr>
-                            <tr>
-                                <td>@fitness_guru_99</td>
-                                <td>120K</td>
-                                <td><span class="text-danger fw-bold">68%</span></td>
-                                <td><span class="badge bg-danger">Fraud Suspect</span></td>
-                                <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
-                            </tr>
-                            <tr>
-                                <td>@tech_insider</td>
-                                <td>8.5K</td>
-                                <td><span class="text-warning fw-bold">25%</span></td>
-                                <td><span class="badge bg-warning text-dark">Warning</span></td>
-                                <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card p-4 h-100">
-                        <h5 class="fw-bold mb-4">Messages</h5>
-                        <div class="d-flex mb-3 align-items-center">
-                            <div class="bg-secondary rounded-circle me-3" style="width: 40px; height: 40px;"></div>
-                            <div>
-                                <h6 class="fw-bold mb-0 small">Alex Rivera (Analyst)</h6>
-                                <p class="text-muted small mb-0">The audit for @fitness_guru is complete.</p>
-                            </div>
-                            <small class="ms-auto text-muted">2h ago</small>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card p-4 text-center">
+                            <h6 class="text-muted small fw-bold mb-3">AVG RISK SCORE</h6>
+                            <h3 class="fw-bold mb-0">2.4 / 10</h3>
+                            <span class="badge bg-success-subtle text-success mt-2 small">Low Risk</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card p-4 h-100">
-                        <h5 class="fw-bold mb-4">Upcoming Audits</h5>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-3 d-flex justify-content-between align-items-center">
-                                <span class="small fw-bold">@beauty_queen_v</span>
-                                <span class="badge bg-secondary-light text-secondary">In Progress</span>
-                            </li>
-                            <li class="mb-3 d-flex justify-content-between align-items-center">
-                                <span class="small fw-bold">@gaming_pro_x</span>
-                                <span class="badge bg-light text-dark">Queued</span>
-                            </li>
-                        </ul>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card p-4 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h5 class="fw-bold mb-1">Campaign Performance</h5>
+                                    <p class="text-muted small mb-0">Top campaign metrics for the last 7 days.</p>
+                                </div>
+                                <span class="badge bg-info-subtle text-info">Live</span>
+                            </div>
+                            <div class="analytics-chart rounded-4 p-5 d-flex align-items-center justify-content-center" style="min-height: 260px; background: linear-gradient(180deg, rgba(14,165,233,0.08), rgba(255,255,255,0.1));">
+                                <span class="text-muted">Performance chart placeholder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card p-4 h-100">
+                            <h5 class="fw-bold mb-4">Recent Alerts</h5>
+                            <div class="mb-4">
+                                <p class="mb-1 fw-bold">Potential bot spike</p>
+                                <p class="small text-muted">9 candidate handles flagged in the last 24h.</p>
+                            </div>
+                            <div class="mb-4">
+                                <p class="mb-1 fw-bold">Engagement anomaly</p>
+                                <p class="small text-muted">Campaign reach dropped 28% vs forecast.</p>
+                            </div>
+                            <div>
+                                <p class="mb-1 fw-bold">Audit backlog</p>
+                                <p class="small text-muted">5 pending reports need review.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section id="users" class="dashboard-section">
+                <!-- Table Section -->
+                <div class="card p-4 mb-5 border-0 shadow-sm">
+                    <h5 class="fw-bold mb-4">Recent Candidate Audits</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="border-0">Handle</th>
+                                    <th class="border-0">Followers</th>
+                                    <th class="border-0">Bot Score</th>
+                                    <th class="border-0">Status</th>
+                                    <th class="border-0">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@travel_lexi</td>
+                                    <td>45.2K</td>
+                                    <td><span class="text-success fw-bold">12%</span></td>
+                                    <td><span class="badge bg-success">Safe</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
+                                </tr>
+                                <tr>
+                                    <td>@fitness_guru_99</td>
+                                    <td>120K</td>
+                                    <td><span class="text-danger fw-bold">68%</span></td>
+                                    <td><span class="badge bg-danger">Fraud Suspect</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
+                                </tr>
+                                <tr>
+                                    <td>@tech_insider</td>
+                                    <td>8.5K</td>
+                                    <td><span class="text-warning fw-bold">25%</span></td>
+                                    <td><span class="badge bg-warning text-dark">Warning</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Report</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100">
+                            <h6 class="fw-bold mb-3">Verified Handles</h6>
+                            <p class="small text-muted mb-0">24 candidates with verified authenticity and stable growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100">
+                            <h6 class="fw-bold mb-3">High-Risk Profiles</h6>
+                            <p class="small text-muted mb-0">5 profiles currently generating suspicious engagement patterns.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100">
+                            <h6 class="fw-bold mb-3">Avg. Engagement</h6>
+                            <p class="small text-muted mb-0">Current candidate engagement average is 3.8%, below ideal thresholds.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="orders" class="dashboard-section">
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-6">
+                        <div class="card p-4 border-0 shadow-sm h-100">
+                            <h5 class="fw-bold mb-4">Audit Pipeline</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="small mb-1 fw-bold">@beauty_queen_v</p>
+                                        <p class="small text-muted mb-0">Scheduled for brand safety review.</p>
+                                    </div>
+                                    <span class="badge bg-secondary-light text-secondary">In Progress</span>
+                                </li>
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="small mb-1 fw-bold">@gaming_pro_x</p>
+                                        <p class="small text-muted mb-0">Engagement audit pending.</p>
+                                    </div>
+                                    <span class="badge bg-light text-dark">Queued</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="small mb-1 fw-bold">@eco_lifestyle</p>
+                                        <p class="small text-muted mb-0">Final report ready for review.</p>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success">Ready</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card p-4 border-0 shadow-sm h-100">
+                            <h5 class="fw-bold mb-4">Report Summary</h5>
+                            <div class="mb-3">
+                                <p class="small fw-bold mb-1">Completed audits</p>
+                                <p class="text-muted small mb-0">82 in the last 30 days.</p>
+                            </div>
+                            <div class="mb-3">
+                                <p class="small fw-bold mb-1">High priority issues</p>
+                                <p class="text-muted small mb-0">14 cases requiring immediate attention.</p>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-2">Download Latest Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="messages" class="dashboard-section">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card p-4 border-0 shadow-sm h-100">
+                            <h5 class="fw-bold mb-4">Messages</h5>
+                            <div class="d-flex mb-4 align-items-center">
+                                <img src="assets/images/risk_scoring.png" alt="Elena Vance" class="rounded-circle me-3" width="40" height="40" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 small">Elena Vance (Specialist)</h6>
+                                    <p class="text-muted small mb-0">The audit for @fitness_guru is complete.</p>
+                                </div>
+                                <small class="ms-auto text-muted">2h ago</small>
+                            </div>
+                            <div class="d-flex mb-4 align-items-center">
+                                <img src="assets/images/engagement_audit.png" alt="Noah Chen" class="rounded-circle me-3" width="40" height="40" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 small">Noah Chen (Analyst)</h6>
+                                    <p class="text-muted small mb-0">Please review the latest fraud scorecard.</p>
+                                </div>
+                                <small class="ms-auto text-muted">5h ago</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="assets/images/expert_review.png" alt="Mia Patel" class="rounded-circle me-3" width="40" height="40" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 small">Mia Patel (Alerts)</h6>
+                                    <p class="text-muted small mb-0">New handle with suspicious activity detected.</p>
+                                </div>
+                                <small class="ms-auto text-muted">Yesterday</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card p-4 border-0 shadow-sm h-100">
+                            <h5 class="fw-bold mb-4">Quick Actions</h5>
+                            <button class="btn btn-outline-primary w-100 mb-3">Review open alerts</button>
+                            <button class="btn btn-outline-secondary w-100 mb-3">Assign to analyst</button>
+                            <button class="btn btn-primary w-100">Create new investigation</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
